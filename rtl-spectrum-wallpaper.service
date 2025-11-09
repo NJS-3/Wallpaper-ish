@@ -1,0 +1,12 @@
+[Unit]
+Description=RTL-SDR Spectrum Wallpaper
+After=graphical.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 %h/rtl_spectrum_wallpaper.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
